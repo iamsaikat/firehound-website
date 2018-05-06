@@ -4,18 +4,15 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SignupComponent } from './signup/signup.component';
 import { LandingComponent } from './landing/landing.component';
-import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
+import { DownloadComponent } from './download/download.component';
+import { DeviceComponent } from './device/device.component';
 
-const routes: Routes =[
-    { path: 'home',             component: HomeComponent },
-    { path: 'user-profile',     component: ProfileComponent },
-    { path: 'signup',           component: SignupComponent },
-    { path: 'landing',          component: LandingComponent },
-    { path: 'nucleoicons',      component: NucleoiconsComponent },
-    { path: '', redirectTo: 'home', pathMatch: 'full' }
+const routes: Routes = [
+    { path: 'home', component: HomeComponent },
+    { path: 'download', component: DownloadComponent },
+    { path: 'download/:codename', component: DeviceComponent },
+    { path: '', component: LandingComponent }
 ];
 
 @NgModule({
