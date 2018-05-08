@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-
 import { HomeModule } from './home/home.module';
 import { DownloadComponent } from './download/download.component';
 import { DeviceComponent } from './device/device.component';
@@ -20,18 +20,18 @@ import { DeviceComponent } from './device/device.component';
     AppComponent,
     LandingComponent,
     NavbarComponent,
-    FooterComponent
-,
-    DownloadComponent,
+    FooterComponent,
+    DownloadComponent,
     DeviceComponent
-],
+  ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
