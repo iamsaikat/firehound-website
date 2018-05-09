@@ -14,6 +14,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeModule } from './home/home.module';
 import { DownloadComponent } from './download/download.component';
 import { DeviceComponent } from './device/device.component';
+import { FileSizePipe } from './components/file-size.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DeviceComponent } from './device/device.component';
     NavbarComponent,
     FooterComponent,
     DownloadComponent,
-    DeviceComponent
+    DeviceComponent,
+    FileSizePipe
   ],
   imports: [
     BrowserModule,

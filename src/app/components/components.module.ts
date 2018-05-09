@@ -12,6 +12,7 @@ import { ComponentsComponent } from './components.component';
 import { NotificationComponent } from './notification/notification.component';
 import { NgbdModalComponent } from './modal/modal.component';
 import { NgbdModalContent } from './modal/modal.component';
+import { FileSizePipe } from './file-size.pipe';
 
 @NgModule({
     imports: [
@@ -29,8 +30,8 @@ import { NgbdModalContent } from './modal/modal.component';
         NotificationComponent,
         NgbdModalComponent,
         NgbdModalContent
-    ],
+],
     entryComponents: [NgbdModalContent],
-    exports:[ ComponentsComponent ]
+    exports: [ ComponentsComponent ]
 })
 export class ComponentsModule { }

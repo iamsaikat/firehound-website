@@ -6,6 +6,7 @@ import { AuthService } from './auth.service';
 
 import { AppHttpInterceptor } from './app.http.interceptor';
 import { throwIfAlreadyLoaded } from './module-import-guard';
+import { SharedService } from './shared.service';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
       useClass: AppHttpInterceptor,
       multi: true
     },
-    AuthService
+    AuthService,
+    SharedService
   ]
 })
 export class CoreModule {

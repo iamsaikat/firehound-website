@@ -26,17 +26,8 @@
           </div>
         </div>
         <div class="row example-page">
-            <div class="col-md-3 text-center device">
-                <a [routerLink]="['/download', 'condor']" class="btn btn-outline-neutral btn-round btn-lg"><i class="fa fa-folder"></i> condor</a>
-            </div>
-            <div class="col-md-3 text-center device">
-                <a [routerLink]="['/download', 'tomato']" class="btn btn-outline-neutral btn-round btn-lg"><i class="fa fa-folder"></i> tomato</a>
-            </div>
-            <div class="col-md-3 text-center device">
-                <a [routerLink]="['/download', 'merlin']" class="btn btn-outline-neutral btn-round btn-lg"><i class="fa fa-folder"></i> merlin</a>
-            </div>
-            <div class="col-md-3 text-center device">
-                <a [routerLink]="['/download', 'osprey']" class="btn btn-outline-neutral btn-round btn-lg"><i class="fa fa-folder"></i> osprey</a>
+            <div class="col-md-3 text-center device" *ngFor="let device of devices">
+                <a (click)="gotoDownload(device.codename)" class="btn btn-outline-neutral btn-round btn-lg"><i class="fa fa-folder"></i>{{device.codename}}</a>
             </div>
         </div>
     </div>
