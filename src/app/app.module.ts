@@ -13,6 +13,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { DownloadComponent } from './download/download.component';
 import { DeviceComponent } from './device/device.component';
 import { FileSizePipe } from './components/file-size.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { FileSizePipe } from './components/file-size.pipe';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
   ],
   providers: [],
   bootstrap: [AppComponent]

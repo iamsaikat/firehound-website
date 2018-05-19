@@ -21,6 +21,7 @@
     "@angular/platform-browser": "6.0.2",
     "@angular/platform-browser-dynamic": "6.0.2",
     "@angular/platform-server": "6.0.2",
+    "@angular/pwa": "^0.6.3",
     "@angular/router": "6.0.2",
     "@ng-bootstrap/ng-bootstrap": "^2.0.0",
     "bootstrap": "4.1.1",
@@ -31,7 +32,8 @@
     "nouislider": "9.2.0",
     "popper.js": "^1.12.3",
     "rxjs": "^6.1.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "@angular/service-worker": "6.0.2"
   },
   "devDependencies": {
     "@angular/cli": "6.0.3",
