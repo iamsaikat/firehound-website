@@ -1,6 +1,7 @@
 {
   "name": "firehound",
   "version": "1.0.0",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -21,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.2.11",
     "@angular/platform-server": "^5.2.11",
     "@angular/router": "^5.2.11",
-    "@ng-bootstrap/ng-bootstrap": "2.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.1.1",
     "bootstrap": "4.1.1",
     "core-js": "^2.5.6",
     "hoek": "^5.0.3",
@@ -39,7 +40,7 @@
     "@angular/language-service": "4.3.1",
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
-    "codelyzer": "~3.0.1",
+    "codelyzer": "^4.3.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
@@ -53,5 +54,9 @@
     "tslint": "~5.3.2",
     "typescript": "2.4.2",
     "webpack": "3.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iamsaikat/firehound-website.git"
   }
 }
