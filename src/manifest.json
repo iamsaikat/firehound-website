@@ -1,8 +1,8 @@
 {
-  "name": "firehound",
-  "short_name": "firehound",
+  "name": "Firehound",
+  "short_name": "Firehound",
   "theme_color": "#fa400b",
-  "background_color": "#fafafa",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
