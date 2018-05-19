@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { NouisliderModule } from 'ng2-nouislider';
-import { JWBootstrapSwitchModule } from 'jw-bootstrap-switch-ng2';
 
 import { BasicelementsComponent } from './basicelements/basicelements.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -19,8 +18,7 @@ import { FileSizePipe } from './file-size.pipe';
         CommonModule,
         FormsModule,
         NgbModule,
-        NouisliderModule,
-        JWBootstrapSwitchModule
+        NouisliderModule
     ],
     declarations: [
         ComponentsComponent,
