@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core';
+import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-modal-content',
@@ -10,7 +10,13 @@ import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
         <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="modal-body"> Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+    <div class="modal-body"> Far far away, behind the word mountains,
+    far from the countries Vokalia and Consonantia, there live the blind texts.
+    Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+    A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country,
+    in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control
+    about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of 
+    Lorem Ipsum decided to leave for the far World of Grammar.
     </div>
     <div class="modal-footer">
         <div class="left-side">
@@ -26,7 +32,7 @@ import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 export class NgbdModalContent {
     @Input() name;
 
-    constructor(public activeModal: NgbActiveModal) {}
+    constructor(public activeModal: NgbActiveModal) { }
 }
 
 @Component({
@@ -34,7 +40,7 @@ export class NgbdModalContent {
     templateUrl: './modal.component.html'
 })
 export class NgbdModalComponent {
-    constructor(private modalService: NgbModal) {}
+    constructor(private modalService: NgbModal) { }
     open() {
         const modalRef = this.modalService.open(NgbdModalContent);
         modalRef.componentInstance.name = 'World';

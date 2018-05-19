@@ -16,6 +16,10 @@ export class DownloadComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // this.getAllDevices();
+  }
+
+  getAllDevices () {
     this.sharedService.getAllDevices().subscribe(res => {
       console.log(res);
       this.devices = res;

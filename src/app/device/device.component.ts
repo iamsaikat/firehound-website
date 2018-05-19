@@ -21,6 +21,10 @@ export class DeviceComponent implements OnInit {
 
   ngOnInit() {
     this.codename = this.route.snapshot.params.codename;
+    // this.getDevices();
+  }
+
+  getDevices () {
     console.log(this.codename);
     this.sharedService.getAllDevices().subscribe((res: any) => {
       this.device = res.find(v => v.codename === this.codename).files;

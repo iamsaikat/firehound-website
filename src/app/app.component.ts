@@ -20,7 +20,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  private _router: any;
+  private _router: Subscription;
   @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
   constructor(
@@ -31,12 +31,11 @@ export class AppComponent implements OnInit {
     public location: Location
   ) {}
   ngOnInit() {
-    const navbar: HTMLElement = this.element.nativeElement.children[0]
-      .children[0];
+    const navbar: HTMLElement = this.element.nativeElement.children[0].children[0];
 
       this._router = this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event: NavigationEnd) => {
+      .subscribe((route: ActivatedRoute) => {
         if (window.outerWidth > 991) {
           window.document.children[0].scrollTop = 0;
         } else {

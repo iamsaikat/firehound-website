@@ -10,11 +10,13 @@ export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(public location: Location, private element: ElementRef) {
-        this.sidebarVisible = false;
-    }
+    constructor(
+        public location: Location,
+        private element: ElementRef
+    ) { }
 
     ngOnInit() {
+        this.sidebarVisible = false;
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     }
@@ -24,9 +26,9 @@ export class NavbarComponent implements OnInit {
         // console.log(html);
         // console.log(toggleButton, 'toggle');
 
-        setTimeout(function(){
+        setTimeout(function () {
             toggleButton.classList.add('toggled');
-        }, 500);
+        }, 100);
         html.classList.add('nav-open');
 
         this.sidebarVisible = true;
@@ -50,17 +52,17 @@ export class NavbarComponent implements OnInit {
     isHome() {
         const titlee = this.location.prepareExternalUrl(this.location.path());
 
-        if ( titlee === '/' ) {
+        if (titlee === '/') {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
     isDownload() {
         // const titlee = this.location.prepareExternalUrl(this.location.path());
-        if (  window.location.href.includes('download')) {
+        if (window.location.href.includes('download')) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }

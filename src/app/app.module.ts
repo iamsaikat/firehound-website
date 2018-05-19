@@ -8,10 +8,8 @@ import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
-import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { HomeModule } from './home/home.module';
 import { DownloadComponent } from './download/download.component';
 import { DeviceComponent } from './device/device.component';
 import { FileSizePipe } from './components/file-size.pipe';
@@ -32,7 +30,6 @@ import { FileSizePipe } from './components/file-size.pipe';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule,
     CoreModule
   ],
   providers: [],

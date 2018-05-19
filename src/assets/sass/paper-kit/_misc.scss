@@ -13,7 +13,7 @@ a{
      text-decoration: none;
   }
 
-  // @include transition($fast-transition-time, linear);
+  @include transition($fast-transition-time, linear);
 }
 hr{
     border-color: $medium-pale-bg;
