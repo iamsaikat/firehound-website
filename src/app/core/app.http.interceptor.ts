@@ -35,14 +35,6 @@ export class AppHttpInterceptor implements HttpInterceptor {
       url: `${environment.api.rooturl}/${request.url}`
     });
 
-    return next.handle(authRequest)
-      .catch(err => {
-        if (err instanceof HttpErrorResponse && err.status === 0) {
-          console.log('Check Your Internet Connection And Try again Later');
-        } else if (err instanceof HttpErrorResponse && err.status === 401) {
-          this.router.navigate(['/']);
-        }
-        return observableThrowError(err);
-      });
+    return next.handle(authRequest);
   }
 }
