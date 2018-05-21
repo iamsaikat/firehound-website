@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class SharedService {
 
-constructor(
-  private httpClient: HttpClient
-) { }
+  constructor(
+    private httpClient: HttpClient
+  ) { }
 
-getAllDevices (): Observable<any> {
-  return this.httpClient.get('');
-}
+  getAllDevices(): Observable<any> {
+    return this.httpClient.get('api/');
+  }
 
 }

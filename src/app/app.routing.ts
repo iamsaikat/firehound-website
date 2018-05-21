@@ -5,11 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LandingComponent } from './landing/landing.component';
 import { DownloadComponent } from './download/download.component';
-import { DeviceComponent } from './device/device.component';
 
 const routes: Routes = [
     { path: 'download', component: DownloadComponent },
-    { path: 'download/:codename', component: DeviceComponent },
     { path: '', component: LandingComponent }
 ];
 

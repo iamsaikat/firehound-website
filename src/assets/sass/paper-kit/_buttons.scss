@@ -79,7 +79,7 @@
 .btn-outline-info    { @include btn-outline-styles($info-color, $info-states-color); }
 .btn-outline-warning { @include btn-outline-styles($warning-color, $warning-states-color); }
 .btn-outline-danger  { @include btn-outline-styles($danger-color, $danger-states-color); }
-.btn-outline-neutral { @include btn-outline-styles($white-color, $default-states-color);
+.btn-outline-neutral { @include btn-outline-styles($firehound-color, $default-states-color);
     &:hover,
     &:focus{
         color: $default-states-color;
