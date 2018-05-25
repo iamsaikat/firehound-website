@@ -24,5 +24,28 @@
         "https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
       ]
     }
+  }],
+  "dataGroups": [{
+    "name": "api-freshness",
+    "urls": [
+      "/api.php"
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "1h",
+      "timeout": "10s",
+      "strategy": "freshness"
+    }
+  }, {
+    "name": "api-performance",
+    "urls": [
+      "/",
+      "/api.php"
+    ],
+    "cacheConfig": {
+      "maxSize": 100,
+      "maxAge": "1d",
+      "strategy": "performance"
+    }
   }]
 }
