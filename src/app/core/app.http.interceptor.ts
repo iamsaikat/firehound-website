@@ -10,12 +10,8 @@ import {
 } from '@angular/common/http';
 import { Router } from '@angular/router';
 
-
-
-
 import { AuthService } from './auth.service';
 import { environment } from '../../environments/environment';
-
 
 
 @Injectable()

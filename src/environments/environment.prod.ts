@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   api: {
-    rooturl: 'https://api.firehound.org'
+    rooturl: 'http://173.212.231.34/fh/api.php'
   }
 };

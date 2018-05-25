@@ -49,4 +49,15 @@ export class DownloadComponent implements OnInit {
     this.modalService.open(content, { windowClass: 'dark-modal', size: 'lg', centered: true });
   }
 
+  downloadFile(htmlContent) {
+    this.sharedService.parseURL(htmlContent).subscribe(res => {
+      console.log(res);
+    }, err => {
+      console.log(err);
+    });
+    // const parser = new DOMParser();
+    // const parsedHtml = parser.parseFromString(htmlContent, 'text/html');
+    // console.log(parsedHtml);
+  }
+
 }

@@ -32,7 +32,7 @@ import { environment } from '../environments/environment';
     RouterModule,
     AppRoutingModule,
     CoreModule,
-    //NgxSpinnerModule,
+    // NgxSpinnerModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
   ],
   providers: [],

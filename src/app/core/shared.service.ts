@@ -10,7 +10,11 @@ export class SharedService {
   ) { }
 
   getAllDevices(): Observable<any> {
-    return this.httpClient.get('api/');
+    return this.httpClient.get('');
+  }
+
+  parseURL(url) {
+    return this.httpClient.get('url');
   }
 
 }
