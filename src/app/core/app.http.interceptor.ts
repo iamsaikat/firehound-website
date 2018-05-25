@@ -28,7 +28,7 @@ export class AppHttpInterceptor implements HttpInterceptor {
       // setHeaders: {
       //   Authorization: `Bearer ${token}`
       // },
-      url: `${environment.api.rooturl}/${request.url}`
+      url: `${environment.api.rooturl}${request.url}`
     });
 
     return next.handle(authRequest);

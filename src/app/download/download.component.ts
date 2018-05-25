@@ -40,10 +40,6 @@ export class DownloadComponent implements OnInit {
     });
   }
 
-  gotoDownload (codename) {
-    this.router.navigate(['download', codename]);
-  }
-
   openVerticallyCentered(content, codename) {
     this.device = this.devices.find(v => v.codename === codename);
     this.modalService.open(content, { windowClass: 'dark-modal', size: 'lg', centered: true });
