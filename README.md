@@ -18,7 +18,7 @@ Install latest Node.js \
 Clone the source and run `npm install`\
 Run `ng build --prod --aot` to build the project. \
 The build artifacts will be stored in the `dist/` directory. \
-Use the `--prod` flag for a production build.\
+Use the `--prod` flag for a production build.
 
 ## Further help
 
