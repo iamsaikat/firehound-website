@@ -5,7 +5,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { CoreModule } from './core/core.module';
-// import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
@@ -32,7 +32,7 @@ import { environment } from '../environments/environment';
     RouterModule,
     AppRoutingModule,
     CoreModule,
-    // NgxSpinnerModule,
+    NgxSpinnerModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
   ],
   providers: [],
