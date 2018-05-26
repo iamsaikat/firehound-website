@@ -29,7 +29,6 @@ export class DownloadComponent implements OnInit {
 
   getAllDevices() {
     this.sharedService.getAllDevices().subscribe(res => {
-      console.log(res);
       this.devices = res;
       setTimeout(() => {
         /** spinner ends after 1 seconds */
@@ -46,7 +45,6 @@ export class DownloadComponent implements OnInit {
     this.modalService.open(content, { windowClass: 'dark-modal', size: 'lg', centered: true });
     setTimeout(() => {
       /** spinner ends after 2 seconds */
-      console.log('spinner');
       this.spinner.hide();
     }, 1500);
   }
