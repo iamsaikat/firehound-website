@@ -42,11 +42,10 @@ export class DownloadComponent implements OnInit {
   openVerticallyCentered(content, codename) {
     this.spinner.show();
     this.device = this.devices.find(v => v.codename === codename);
-    this.modalService.open(content, { windowClass: 'dark-modal', size: 'lg', centered: true });
     setTimeout(() => {
-      /** spinner ends after 2 seconds */
       this.spinner.hide();
-    }, 1500);
+      this.modalService.open(content, { windowClass: 'dark-modal', size: 'lg', centered: true });
+    }, 1000);
   }
 
   downloadFile(htmlContent) {
