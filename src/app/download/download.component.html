@@ -63,7 +63,7 @@ type = "ball-atom"
           <tr *ngFor="let file of device.files">
             <td>{{file.filename}}</td>
             <td>{{file.size | fileSize}}</td>
-            <td><a href="{{file.download_url}}" target="_blank"><i class="fa fa-download"></i></a></td>
+            <td><a href="{{file.download_url}}"><i class="fa fa-download"></i></a></td>
           </tr>
         </tbody>
       </table>
