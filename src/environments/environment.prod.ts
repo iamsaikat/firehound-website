@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   api: {
-    rooturl: 'https://harryyoud.co.uk/fh/api.php'
+    rooturl: 'http://host.firehound.org/fh/dl.txt'
   }
 };
