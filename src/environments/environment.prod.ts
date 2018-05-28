@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   api: {
-    rooturl: 'http://host.firehound.org/fh/dl.txt'
+    rooturl: 'https://host.firehound.org/fh/dl.txt'
   }
 };
