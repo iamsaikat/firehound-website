@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
 import { SharedService } from '../core/shared.service';
 import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/platform-browser';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSpinnerService } from 'ngx-spinner';
 
@@ -18,7 +19,8 @@ export class DownloadComponent implements OnInit {
     private sharedService: SharedService,
     public router: Router,
     private modalService: NgbModal,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    @Inject(DOCUMENT) private document: any
   ) { }
 
   ngOnInit() {
@@ -48,15 +50,13 @@ export class DownloadComponent implements OnInit {
     }, 1000);
   }
 
-  downloadFile(htmlContent) {
-    this.sharedService.parseURL(htmlContent).subscribe(res => {
-      console.log(res);
+  downloadFile(htmlContent): void {
+    const reqData = {link: htmlContent};
+    this.sharedService.downloadFile(reqData).subscribe(res => {
+      // console.log(res);
+      this.document.location.href = res.download_link;
     }, err => {
       console.log(err);
     });
-    // const parser = new DOMParser();
-    // const parsedHtml = parser.parseFromString(htmlContent, 'text/html');
-    // console.log(parsedHtml);
   }
-
 }

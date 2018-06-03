@@ -10,11 +10,10 @@ export class SharedService {
   ) { }
 
   getAllDevices(): Observable<any> {
-    return this.httpClient.get('');
+    return this.httpClient.get('devices');
   }
 
-  parseURL(url) {
-    return this.httpClient.get('url');
+  downloadFile(url): Observable<any> {
+    return this.httpClient.post('download', url);
   }
-
 }
