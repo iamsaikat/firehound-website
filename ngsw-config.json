@@ -27,7 +27,7 @@
   "dataGroups": [{
     "name": "api-freshness",
     "urls": [
-      "/api.php"
+      "/devices"
     ],
     "cacheConfig": {
       "maxSize": 100,
@@ -39,7 +39,7 @@
     "name": "api-performance",
     "urls": [
       "/",
-      "/api.php"
+      "/devices"
     ],
     "cacheConfig": {
       "maxSize": 100,

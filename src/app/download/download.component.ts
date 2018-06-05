@@ -31,7 +31,7 @@ export class DownloadComponent implements OnInit {
 
   getAllDevices() {
     this.sharedService.getAllDevices().subscribe(res => {
-      this.devices = res;
+      this.devices = res.devices;
       setTimeout(() => {
         /** spinner ends after 1 seconds */
         this.spinner.hide();
