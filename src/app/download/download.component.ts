@@ -50,8 +50,8 @@ export class DownloadComponent implements OnInit {
     }, 1000);
   }
 
-  downloadFile(htmlContent): void {
-    const reqData = {link: htmlContent};
+  downloadFile(id): void {
+    const reqData = {id: id};
     this.sharedService.downloadFile(reqData).subscribe(res => {
       // console.log(res);
       this.document.location.href = res.download_link;

@@ -10,7 +10,7 @@ export class SharedService {
   ) { }
 
   getAllDevices(): Observable<any> {
-    return this.httpClient.get('devices');
+    return this.httpClient.get('gdrive-files');
   }
 
   downloadFile(url): Observable<any> {

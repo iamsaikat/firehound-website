@@ -27,7 +27,7 @@
   "dataGroups": [{
     "name": "api-freshness",
     "urls": [
-      "/devices"
+      "/gdrive-files"
     ],
     "cacheConfig": {
       "maxSize": 100,
@@ -39,7 +39,7 @@
     "name": "api-performance",
     "urls": [
       "/",
-      "/devices"
+      "/gdrive-files"
     ],
     "cacheConfig": {
       "maxSize": 100,
