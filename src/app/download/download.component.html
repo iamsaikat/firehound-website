@@ -56,13 +56,15 @@ type = "ball-atom"
           <tr>
             <th>Filename</th>
             <th>Size</th>
-            <th>Download</th>
+            <th>Downloads</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let file of device.files">
             <td>{{file.name}}</td>
             <td>{{file.size | fileSize}}</td>
+            <td>{{file.download}}</td>
             <td><a (click)="downloadFile(file.id)"><i class="fa fa-download"></i></a></td>
           </tr>
         </tbody>
