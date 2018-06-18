@@ -65,7 +65,7 @@ type = "ball-atom"
             <td>{{file.name}}</td>
             <td>{{file.size | fileSize}}</td>
             <td>{{file.download}}</td>
-            <td><a (click)="downloadFile(file.id)"><i class="fa fa-download"></i></a></td>
+            <td><a class="download" (click)="downloadFile(file.id)"><i class="fa fa-download"></i></a></td>
           </tr>
         </tbody>
       </table>
