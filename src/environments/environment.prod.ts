@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   api: {
-    rooturl: 'https://firehound.herokuapp.com/api'
+    rooturl: 'https://api.firehound.org/nodejs/api'
   }
 };
