@@ -12,9 +12,9 @@ import { LandingComponent } from './landing/landing.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { DownloadComponent } from './download/download.component';
+import { FileSizePipe } from './components/file-size.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { ComponentsModule } from './components/components.module';
     LandingComponent,
     NavbarComponent,
     FooterComponent,
-    DownloadComponent
+    DownloadComponent,
+    FileSizePipe
   ],
   imports: [
     BrowserModule,
@@ -33,7 +34,6 @@ import { ComponentsModule } from './components/components.module';
     CoreModule,
     NgxSpinnerModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
-    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
